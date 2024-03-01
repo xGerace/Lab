@@ -13,7 +13,7 @@ owm_api_key = os.getenv('OPENWEATHER_API_KEY')
 owm = OWM(owm_api_key)
 newsdata_api_key = os.getenv('NEWSDATA_API_KEY')
 
-DEFAULT_LOCATION = 'Grand Rapids, MI, US'
+DEFAULT_LOCATION = os.getenv('DEFAULT_LOCATION')
 
 def get_current_time():
     """Returns the current time."""

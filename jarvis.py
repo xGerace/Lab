@@ -72,7 +72,7 @@ def is_news_request(command):
     news_keywords = [
         "today's headlines", "latest big stories", "recent major events", 
         "top news of the day", "current news update", "fetch today's news",
-        "today's big stories", "news briefing", "latest big news"
+        "today's big stories", "news briefing", "latest news", "latest big news"
     ]
 
     command_lower = command.lower()
@@ -128,6 +128,10 @@ def extract_specific_time(command):
     return None
 
 def extract_news_params(command):
+    """Example uses:
+    Include news_keywords, for a certain country use the country code, for certain categories use words like food or politics.
+    Eg. What is the latest news in the past day from country of JP in category of food?"""
+
     # Initialize parameters
     timeframe, country, category = None, None, None
 
